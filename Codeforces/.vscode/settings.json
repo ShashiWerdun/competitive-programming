@@ -1,0 +1,8 @@
+{
+    "competitive-programming-helper.firstTime": false,
+    "C_Cpp.errorSquiggles": "Disabled",
+    "files.associations": {
+        "*.cpp": "cpp",
+        "ostream": "cpp"
+    }
+}

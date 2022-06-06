@@ -1,15 +1,10 @@
-// INCOMPLETE
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long
 
-int get_gcd(int x, int y)
+int get_gcd(int a, int b)
 {
-    int r = 0, a, b;
-    a = (x > y) ? x : y;
-    b = (x < y) ? x : y;
-
-    r = b;
+    int r = b;
     while (a % b != 0)
     {
         r = a % b;
@@ -25,31 +20,26 @@ int main()
     cin >> t;
     for (int cases = 0; cases < t; cases++)
     {
-        int n;
+        ll n;
         cin >> n;
-        int a, b;
-        if (n % 2 == 0)
+        if (n == 2)
         {
-            a = n / 2 - 1;
+            cout << 0 << endl;
         }
-        else
+        else if (n % 2 == 1)
         {
-            a = n / 2;
+            cout << ((n - 1) / 2 * (n + 1) / 2) - 1 << endl;
         }
-        b = n / 2 + 1;
-        int ans = 0;
-        while (a > 0)
+        else if (n % 2 == 0)
         {
-            int gcd = get_gcd(a, b);
-            int lcm = a * b / gcd;
-            int temp_ans = lcm - gcd;
-            if (temp_ans > ans)
+            if ((n / 2) % 2 == 0)
             {
-                ans = temp_ans;
+                cout << (n / 2 - 1) * (n / 2 + 1) - 1 << endl;
             }
-            a--;
-            b++;
+            else
+            {
+                cout << (n / 2 - 2) * (n / 2 + 2) - 1 << endl;
+            }
         }
-        cout << ans << endl;
     }
 }

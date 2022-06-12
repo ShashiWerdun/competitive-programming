@@ -30,6 +30,12 @@ int main()
         int ans = 0;
         while (ptr1 < ptr2)
         {
+            if ((a[ptr2] + a[ptr2 - 1]) / k > (a[ptr2] + a[ptr1]) / k)
+            {
+                ans += (a[ptr2] + a[ptr2 - 1]) / k;
+                ptr2 -= 2;
+                continue;
+            }
             int temp = k - a[ptr2];
             while (a[ptr1] < temp && ptr1 < ptr2)
             {

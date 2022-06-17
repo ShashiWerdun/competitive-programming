@@ -4,7 +4,10 @@ using namespace std;
 
 int main()
 {
-    int a = 4, b = -5;
-    int c = b % a;
-    cout << c;
+    int n = 200000;
+    for (int i = 0; i < n; i++)
+    {
+        cout << 1;
+    }
+    cout << endl;
 }
